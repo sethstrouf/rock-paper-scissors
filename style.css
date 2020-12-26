@@ -23,6 +23,10 @@ h1 {
     font-weight: 1000;
 }
 
+p {
+    font-size: 30px;
+}
+
 h2 {
     font-size: 40px;
     font-weight: 800;
@@ -90,13 +94,24 @@ header {
     justify-content: center;
 }
 
-.fas:hover {
+.fas:hover:not(.computer) {
     box-shadow: 0 0 20px 10px var(--myOrange);
 }
 
-.clicked {
+.fas:active:not(.computer) {
     box-shadow: 0 0 20px 10px var(--myOrange);
-    background: hsl(233, 85%, 15%);
+    background: hsl(233, 85%, 20%);
+    transition: all .5;
+}
+
+div .clicked {
+    box-shadow: 0 0 20px 10px var(--myOrange);
+}
+
+.computer-box {
+    box-shadow: 0 0 20px var(--myOrange);
+    background: var(--darkblue);
+    transition: all .5;
 }
 
 .score {
