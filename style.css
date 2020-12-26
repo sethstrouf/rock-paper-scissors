@@ -1,0 +1,122 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+  
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+    --lightblue:  hsl(196, 64%, 80%);
+    --darkblue: #050A30;
+    --myOrange: orangered; 
+    --myWhite: white;
+}
+
+body {
+    background: hsla(196, 64%, 69%, 0.35);
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 1000;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 800;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 100px;
+    font-weight: 1000;
+    color: var(--darkblue);
+    -webkit-text-stroke: 1px var(--myOrange);
+}
+
+.wrapper { 
+    border: 5px solid var(--darkblue);
+    background: #7EC8E3;
+    border-radius: 10px;
+    margin: 2% auto;
+    padding: 0px;
+    height: 95vh;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper > * {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: var(--lightblue);
+    justify-content: center;
+    box-shadow: 0px 2px 5px hsla(0, 0%, 0%, 0.3);
+}
+
+.player-select, .computer-select {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fas {
+    font-size: 75px;
+    color: var(--myWhite);
+    background-color: var(--darkblue);
+    border-radius: 10%;
+    box-shadow: 0 0 20px var(--myOrange);
+    height: 125px;
+    width: 125px;
+    margin: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fas:hover {
+    box-shadow: 0 0 20px 10px var(--myOrange);
+}
+
+.clicked {
+    box-shadow: 0 0 20px 10px var(--myOrange);
+    background: hsl(233, 85%, 15%);
+}
+
+.score {
+    background: var(--lightblue);
+    width: 50%;
+    flex: .1;
+    border-radius: 10px 10px 0 0;
+    border: 3px solid var(--darkblue);
+}
+
+.score-board {
+    background: var(--lightblue);
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    color: var(--darkblue);
+    font-size: 100px;
+    width: 50%;
+    margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+    border: 3px solid var(--darkblue);
+    border-top: 0;
+}

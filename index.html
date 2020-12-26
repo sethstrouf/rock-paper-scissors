@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charmap="utf-8">
+    <script src="https://kit.fontawesome.com/a25fb5f172.js" crossorigin="anonymous"></script>
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script src="rps.js"></script>
+    <div class="wrapper">
+
+        <header>
+            <h1>Rock, Paper, Scissors!</h1>
+        </header>
+        
+        <h2>Make Your Choice</h2>
+
+        <div class="player-select">
+            <i data-choice="rock" class="fas fa-hand-rock"></i>
+            <i data-choice="paper" class="fas fa-hand-paper"></i>
+            <i data-choice="scissors" class="fas fa-hand-scissors"></i>
+        </div>
+
+        <h2>Computer Chooses</h2>
+
+        <div class="computer-select">
+            <div class="computer-choice">
+                <!-- <i class="fas fa-hand-rock clicked"></i> -->
+            </div>
+        </div>
+
+        <div class="final-message">
+            <!-- <h3>You win!</h3> -->
+        </div>
+
+        <h2 class="score">Score</h2>
+
+        <div class="score-board">
+            <div class="player-score">
+                0
+            </div>
+            <div class="computer-score">
+                0
+            </div>
+        </div>
+
+    </div>
+
+<script src="rps.js"></script>
 </body>
 </html>

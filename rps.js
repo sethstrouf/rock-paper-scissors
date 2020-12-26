@@ -8,22 +8,22 @@ function computerPlay () {
 }
 
 function playerLoss(computer) {
-    alert("Computer chose "+computer+"! YOU LOSE!");
+    console.log("Computer chose "+computer+"! YOU LOSE!");
             return "LOSS";
 }
 
 function playerWin(computer) {
-    alert("Computer chose "+computer+"! YOU WIN!");
+    console.log("Computer chose "+computer+"! YOU WIN!");
             return "WIN";
 }
 
 function giveScore(playerScore, computerScore) {
     if (playerScore===computerScore) {
-        alert(`YOU TIED THE GAME WITH A SCORE OF ${playerScore}`);
+        console.log(`YOU TIED THE GAME WITH A SCORE OF ${playerScore}`);
     } else if (playerScore > computerScore) {
-        alert(`YOU WON THE GAME ${playerScore} to ${computerScore}!`);
+        console.log(`YOU WON THE GAME ${playerScore} to ${computerScore}!`);
     } else {
-        alert(`YOU LOST THE GAME ${playerScore} to ${computerScore}!`);
+        console.log(`YOU LOST THE GAME ${playerScore} to ${computerScore}!`);
     }
 }
 
@@ -34,7 +34,7 @@ function playRound () {
     computer = computer.toUpperCase();
 
     if (player === computer) {
-        alert("It's a tie!");
+        console.log("It's a tie!");
         return "TIE";
     } else if (player==="ROCK") {
         if (computer==="PAPER") {
@@ -80,4 +80,13 @@ function game(numOfGames) {
     giveScore(playerScore, computerScore);
 }
 
-game(5);
+game(0);
+
+const boxes = document.querySelectorAll("[data-choice]");
+
+boxes.forEach(box => {
+    box.addEventListener("click", () => {
+        console.log("click click");
+        box.classList.add("clicked");
+    });
+});
