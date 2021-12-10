@@ -91,7 +91,6 @@ function playRound (playerChoice) {
     }
 }
 
-//global vars - refactor when I'm better at this
 let boxes = document.querySelectorAll("[data-choice]");
 let computerDiv = document.querySelector("#computer-choice");
 let computerDisplay = document.querySelector("i.computer");
